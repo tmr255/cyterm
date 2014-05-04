@@ -1,0 +1,151 @@
+object frmHelp: TfrmHelp
+  Left = 646
+  Top = 126
+  BorderStyle = bsToolWindow
+  Caption = 'Help Screen'
+  ClientHeight = 236
+  ClientWidth = 286
+  Color = clGray
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clSilver
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  Position = poScreenCenter
+  PixelsPerInch = 96
+  object Label1: TLabel
+    Left = 96
+    Top = 8
+    Width = 93
+    Height = 19
+    Caption = 'Key Strokes'
+    Color = clGray
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 8
+    Top = 32
+    Width = 118
+    Height = 13
+    Caption = '[F1] = Show help screen.'
+    Color = clGray
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 8
+    Top = 56
+    Width = 170
+    Height = 13
+    Caption = '[F11] = Reset screen size to default.'
+    Color = clGray
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 8
+    Top = 80
+    Width = 125
+    Height = 13
+    Caption = '[F12] = Toggle data scope'
+    Color = clGray
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 8
+    Top = 104
+    Width = 156
+    Height = 13
+    Caption = '[Alt]+[Enter] = Toggles full screen'
+    Color = clGray
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 8
+    Top = 128
+    Width = 126
+    Height = 13
+    Caption = '[Alt]+C = Configure screen.'
+    Color = clGray
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 8
+    Top = 152
+    Width = 145
+    Height = 13
+    Caption = '[Alt]+D = Connect to new host.'
+    Color = clGray
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label8: TLabel
+    Left = 8
+    Top = 176
+    Width = 147
+    Height = 13
+    Caption = '[Alt]+H = Disconnect from host.'
+    Color = clGray
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label9: TLabel
+    Left = 8
+    Top = 200
+    Width = 270
+    Height = 13
+    Caption = '[Alt]+V = Toggles between default 80x25 to 80x50 modes'
+    Color = clGray
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+  end
+end

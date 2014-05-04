@@ -1,4 +1,6 @@
-Copyright (c) 2014, tmr
+cyterm -
+Copyright (c) 2001 - 2014, Shawn Rapp (shawnrapp@gmail.com).
+Copyright (c) 2001 - 2014, Andrew Lukaszevich (tmr@kriktor.org).
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -21,3 +23,7 @@ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+ICEANSI - Copyright (c) 2001 Vince Weaver (mjweaver@umd5.umd.edu).
+TTnCnx - Copyright (c) 1996 - 1998, by François PIETTE (francois.piette@pophost.eunet.be).
+

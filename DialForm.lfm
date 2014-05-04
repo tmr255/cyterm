@@ -1,0 +1,87 @@
+object frmDial: TfrmDial
+  Left = 391
+  Top = 455
+  BorderStyle = bsToolWindow
+  Caption = 'Connect to Host'
+  ClientHeight = 70
+  ClientWidth = 398
+  Color = clTeal
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  object Label1: TLabel
+    Left = 7
+    Top = 10
+    Width = 22
+    Height = 13
+    Caption = 'Host'
+  end
+  object Label2: TLabel
+    Left = 277
+    Top = 10
+    Width = 19
+    Height = 13
+    Caption = 'Port'
+  end
+  object HostEdit: TEdit
+    Left = 39
+    Top = 10
+    Width = 218
+    Height = 24
+    TabOrder = 0
+    Text = 'HostEdit'
+  end
+  object Button1: TButton
+    Left = 11
+    Top = 42
+    Width = 92
+    Height = 23
+    Caption = 'Connect'
+    Default = True
+    ModalResult = 1
+    TabOrder = 2
+  end
+  object Button5: TButton
+    Left = 129
+    Top = 41
+    Width = 73
+    Height = 24
+    Caption = 'New Entry'
+    TabOrder = 3
+    OnClick = Button5Click
+  end
+  object Button4: TButton
+    Left = 209
+    Top = 41
+    Width = 73
+    Height = 24
+    Caption = 'Edit Entry'
+    TabOrder = 4
+  end
+  object PortEdit: TEdit
+    Left = 306
+    Top = 10
+    Width = 80
+    Height = 24
+    TabOrder = 1
+    Text = 'PortEdit'
+  end
+  object Button2: TButton
+    Left = 320
+    Top = 40
+    Width = 75
+    Height = 25
+    Caption = 'Cancel'
+    ModalResult = 2
+    TabOrder = 5
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 344
+    Top = 8
+  end
+end
