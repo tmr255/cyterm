@@ -129,14 +129,14 @@ type
     { Published declarations }
   end;
 
-procedure Register;
+//procedure Register;
 
 implementation
 
-procedure Register;
-begin
-  RegisterComponents('Samples', [TVgaEmu]);
-end;
+//procedure Register;
+//begin
+//  RegisterComponents('Samples', [TVgaEmu]);
+//end;
 
 constructor  TVGAEmu.Create(AOwner: TComponent);
 begin
@@ -319,12 +319,14 @@ begin
          For x := xPos to xPos+font[0].width-1 do
               screen[X+Y*vWidth] := clr;
    end;
+
+//   fillchar(screen,255,length(screen));
+
    For Y := 0 to vHeight-1 do
    begin
       Row := textBuf.picture.bitmap.ScanLine[y];
-      move(screen[(y*vWidth)],
-           row^,
-           (vWidth));
+    //  Row := PByteArray(textBuf.Picture.Bitmap.RawImage.GetLineStart(Y));
+       move(screen[(y*vWidth)], row^, (vWidth));
    end;
 end;
 
@@ -382,7 +384,7 @@ begin
    with lpPalette^ do
    begin
       PalVersion := $300;
-      PalNumEntries := 255;
+      PalNumEntries := 256;
    end;
   {-$R-}
    For I := 0 to 15 do
@@ -406,8 +408,8 @@ begin
    begin
      result := Palette;
    end
-   else
-    result := Palette;
+   else //ERROR?!!!!! - Tag
+-    result := Palette;
 end;
 
 

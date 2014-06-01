@@ -1,12 +1,12 @@
 object MF: TMF
-  Left = 317
+  Left = 525
   Height = 431
-  Top = 172
+  Top = 583
   Width = 653
   Anchors = []
   BorderIcons = []
   BorderStyle = bsNone
-  Caption = 'CyTerm v1.0'
+  Caption = 'CyTerm v1.1'
   ClientHeight = 431
   ClientWidth = 653
   Color = clNone
@@ -18,7 +18,9 @@ object MF: TMF
   OnDestroy = FormDestroy
   OnKeyDown = FormKeyDown
   OnKeyPress = FormKeyPress
+  OnPaint = FormPaint
   OnResize = FormResize
+  OnShow = FormShow
   ParentBiDiMode = False
   Position = poScreenCenter
   LCLVersion = '1.2.0.3'
@@ -280,8 +282,8 @@ object MF: TMF
     AllocBy = 7
     Height = 20
     Width = 56
-    left = 24
-    top = 48
+    left = 32
+    top = 72
     Bitmap = {
       4C69060000003800000014000000FF7B0000FF7B0000FF7B00FFFF7B00FFFF7B
       0000FF7B00FFFF7B00FFFF7B00FFFF7B0000FF7B00FFFF7B0000FF7B0000FF7B

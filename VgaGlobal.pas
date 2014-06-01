@@ -12,7 +12,7 @@ unit.
 }
 
 interface
-uses Graphics, LCLIntf, LCLType, LMessages;
+uses Graphics, LCLIntf, LCLType, LMessages, types;
 const
 
    VGAColor : array[0..16] of TColor = //default PC color scheme...windows colors apply all except for brown.  colors are in exact order.

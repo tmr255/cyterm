@@ -17,8 +17,6 @@ uses
   Help in 'Help.pas' {frmHelp},
   VgaGlobal in 'VgaGlobal.pas';
 
-{$R *.res}
-
 begin
   Application.Initialize;
   Application.Title := 'cyterm';

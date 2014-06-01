@@ -88,6 +88,8 @@ begin
   SearchFileExt(ExtractFilepath(Application.Exename) + '\', '.dll', Files);
   for i := 0 to Files.Count-1 do
     begin
+      //No plugins! - Tag
+      {
       //create a new plug in
       TestPlugIn := TTestPlugIn.Create;
       TestPlugIn.Address := LoadLibrary(PChar(Files[i]));
@@ -98,6 +100,7 @@ begin
       //get the function insert text
       TestPlugIn.Call := GetProcAddress(TestPlugIn.Address, 'InsertText');
       PlugIns.Add(TestPlugIn);
+      }
     end;
   Files.Free;
 end;
@@ -111,7 +114,8 @@ begin
      //Run finalize function in the plugin before you unload it.
      //Because it is not applicable here so it is ignored.
      //free every loaded plugins
-     FreeLibrary(TTestPlugIn(PlugIns[i]).Address);
+// No Plugins! - Tag
+//     FreeLibrary(TTestPlugIn(PlugIns[i]).Address);
   end;
   PlugIns.Free;
 end;

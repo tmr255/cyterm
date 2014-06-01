@@ -4,13 +4,14 @@
     <PathDelim Value="\"/>
     <Version Value="9"/>
     <BuildModes Active="Default"/>
-    <Units Count="14">
+    <Units Count="23">
       <Unit0>
         <Filename Value="cyterm.lpr"/>
         <IsPartOfProject Value="True"/>
+        <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="20"/>
+        <CursorPos X="14" Y="1"/>
+        <UsageCount Value="27"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit0>
       <Unit1>
@@ -20,11 +21,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="main"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="455"/>
-        <CursorPos X="53" Y="488"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="246"/>
+        <CursorPos X="3" Y="248"/>
+        <UsageCount Value="27"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -36,7 +37,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="27"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit2>
       <Unit3>
@@ -46,7 +47,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="27"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit3>
       <Unit4>
@@ -57,7 +58,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="27"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit4>
       <Unit5>
@@ -68,7 +69,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="27"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit5>
       <Unit6>
@@ -76,9 +77,9 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="IceAnsi"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="86"/>
+        <CursorPos X="11" Y="98"/>
+        <UsageCount Value="27"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit6>
       <Unit7>
@@ -88,7 +89,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="27"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit7>
       <Unit8>
@@ -96,19 +97,22 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="relay"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="79"/>
+        <CursorPos X="21" Y="117"/>
+        <UsageCount Value="27"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit8>
       <Unit9>
         <Filename Value="VgaEmu.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="VgaEmu"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="376"/>
+        <CursorPos X="2" Y="412"/>
+        <UsageCount Value="27"/>
+        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit9>
       <Unit10>
@@ -118,8 +122,8 @@
         <UnitName Value="Config"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="20"/>
+        <CursorPos X="21" Y="8"/>
+        <UsageCount Value="27"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit10>
       <Unit11>
@@ -130,7 +134,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="27"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit11>
       <Unit12>
@@ -139,64 +143,237 @@
         <UnitName Value="VgaGlobal"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="20"/>
+        <CursorPos X="50" Y="15"/>
+        <UsageCount Value="27"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit12>
       <Unit13>
-        <Filename Value="TNCNX.PAS"/>
-        <UnitName Value="TnCnx"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="0"/>
+        <Filename Value="mainsocket.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="mainSocket"/>
+        <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="197"/>
-        <CursorPos X="31" Y="112"/>
-        <UsageCount Value="10"/>
+        <TopLine Value="44"/>
+        <CursorPos X="14" Y="80"/>
+        <UsageCount Value="27"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit13>
+      <Unit14>
+        <Filename Value="TNCNX.PAS"/>
+        <UnitName Value="TnCnx"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="88"/>
+        <CursorPos X="35" Y="112"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\win\fpwinsockh.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="160"/>
+        <CursorPos X="3" Y="205"/>
+        <UsageCount Value="10"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\win\winsock2.pp"/>
+        <UnitName Value="WinSock2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="179"/>
+        <CursorPos X="42" Y="221"/>
+        <UsageCount Value="10"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="C:\lazarus\lcl\include\wincontrol.inc"/>
+        <EditorIndex Value="5"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="7314"/>
+        <CursorPos X="4" Y="7331"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="C:\lazarus\lcl\include\customform.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="132"/>
+        <CursorPos X="1" Y="161"/>
+        <UsageCount Value="10"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="C:\lazarus\lcl\include\application.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1370"/>
+        <CursorPos X="1" Y="1393"/>
+        <UsageCount Value="10"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="C:\lazarus\lcl\graphics.pp"/>
+        <UnitName Value="Graphics"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1357"/>
+        <CursorPos X="62" Y="1383"/>
+        <UsageCount Value="10"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\inc\systemh.inc"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="502"/>
+        <CursorPos X="11" Y="523"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="C:\lazarus\lcl\include\winapih.inc"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="42"/>
+        <CursorPos X="10" Y="64"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit22>
     </Units>
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
-    <JumpHistory Count="9" HistoryIndex="8">
+    <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="TNCNX.PAS"/>
-        <Caret Line="1" Column="1" TopLine="1"/>
+        <Filename Value="VgaEmu.pas"/>
+        <Caret Line="254" Column="36" TopLine="218"/>
       </Position1>
       <Position2>
-        <Filename Value="TNCNX.PAS"/>
-        <Caret Line="55" Column="56" TopLine="36"/>
+        <Filename Value="VgaEmu.pas"/>
+        <Caret Line="298" Column="26" TopLine="263"/>
       </Position2>
       <Position3>
-        <Filename Value="TNCNX.PAS"/>
-        <Caret Line="112" Column="35" TopLine="92"/>
+        <Filename Value="VgaEmu.pas"/>
+        <Caret Line="301" Column="26" TopLine="266"/>
       </Position3>
       <Position4>
-        <Filename Value="main.pas"/>
-        <Caret Line="1" Column="1" TopLine="1"/>
+        <Filename Value="VgaEmu.pas"/>
+        <Caret Line="303" Column="24" TopLine="268"/>
       </Position4>
       <Position5>
-        <Filename Value="main.pas"/>
-        <Caret Line="9" Column="18" TopLine="1"/>
+        <Filename Value="VgaEmu.pas"/>
+        <Caret Line="305" Column="22" TopLine="270"/>
       </Position5>
       <Position6>
-        <Filename Value="main.pas"/>
-        <Caret Line="24" Column="53" TopLine="1"/>
+        <Filename Value="VgaEmu.pas"/>
+        <Caret Line="308" Column="43" TopLine="273"/>
       </Position6>
       <Position7>
-        <Filename Value="main.pas"/>
-        <Caret Line="44" Column="53" TopLine="11"/>
+        <Filename Value="VgaEmu.pas"/>
+        <Caret Line="320" Column="21" TopLine="285"/>
       </Position7>
       <Position8>
-        <Filename Value="main.pas"/>
-        <Caret Line="479" Column="53" TopLine="455"/>
+        <Filename Value="VgaEmu.pas"/>
+        <Caret Line="323" Column="37" TopLine="288"/>
       </Position8>
       <Position9>
-        <Filename Value="TNCNX.PAS"/>
-        <Caret Line="225" Column="17" TopLine="212"/>
+        <Filename Value="VgaEmu.pas"/>
+        <Caret Line="329" Column="19" TopLine="294"/>
       </Position9>
+      <Position10>
+        <Filename Value="VgaEmu.pas"/>
+        <Caret Line="334" Column="36" TopLine="298"/>
+      </Position10>
+      <Position11>
+        <Filename Value="VgaEmu.pas"/>
+        <Caret Line="443" Column="19" TopLine="407"/>
+      </Position11>
+      <Position12>
+        <Filename Value="main.pas"/>
+        <Caret Line="265" Column="28" TopLine="245"/>
+      </Position12>
+      <Position13>
+        <Filename Value="main.pas"/>
+        <Caret Line="248" Column="3" TopLine="246"/>
+      </Position13>
+      <Position14>
+        <Filename Value="VgaEmu.pas"/>
+        <Caret Line="474" Column="15" TopLine="442"/>
+      </Position14>
+      <Position15>
+        <Filename Value="VgaEmu.pas"/>
+        <Caret Line="323" Column="1" TopLine="302"/>
+      </Position15>
+      <Position16>
+        <Filename Value="VgaEmu.pas"/>
+        <Caret Line="325" Column="1" TopLine="302"/>
+      </Position16>
+      <Position17>
+        <Filename Value="VgaEmu.pas"/>
+        <Caret Line="327" Column="1" TopLine="302"/>
+      </Position17>
+      <Position18>
+        <Filename Value="VgaEmu.pas"/>
+        <Caret Line="323" Column="1" TopLine="302"/>
+      </Position18>
+      <Position19>
+        <Filename Value="VgaEmu.pas"/>
+        <Caret Line="325" Column="1" TopLine="302"/>
+      </Position19>
+      <Position20>
+        <Filename Value="VgaEmu.pas"/>
+        <Caret Line="323" Column="2" TopLine="302"/>
+      </Position20>
+      <Position21>
+        <Filename Value="VgaEmu.pas"/>
+        <Caret Line="249" Column="41" TopLine="226"/>
+      </Position21>
+      <Position22>
+        <Filename Value="VgaEmu.pas"/>
+        <Caret Line="861" Column="5" TopLine="818"/>
+      </Position22>
+      <Position23>
+        <Filename Value="VgaEmu.pas"/>
+        <Caret Line="434" Column="49" TopLine="425"/>
+      </Position23>
+      <Position24>
+        <Filename Value="VgaEmu.pas"/>
+        <Caret Line="1" Column="1" TopLine="1"/>
+      </Position24>
+      <Position25>
+        <Filename Value="VgaEmu.pas"/>
+        <Caret Line="52" Column="29" TopLine="16"/>
+      </Position25>
+      <Position26>
+        <Filename Value="VgaEmu.pas"/>
+        <Caret Line="377" Column="30" TopLine="377"/>
+      </Position26>
+      <Position27>
+        <Filename Value="VgaEmu.pas"/>
+        <Caret Line="52" Column="29" TopLine="30"/>
+      </Position27>
+      <Position28>
+        <Filename Value="VgaEmu.pas"/>
+        <Caret Line="405" Column="22" TopLine="390"/>
+      </Position28>
+      <Position29>
+        <Filename Value="VgaEmu.pas"/>
+        <Caret Line="387" Column="27" TopLine="374"/>
+      </Position29>
+      <Position30>
+        <Filename Value="VgaEmu.pas"/>
+        <Caret Line="411" Column="22" TopLine="373"/>
+      </Position30>
     </JumpHistory>
   </ProjectSession>
+  <Debugging>
+    <BreakPoints Count="1">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="mainsocket.pas"/>
+        <Line Value="88"/>
+      </Item1>
+    </BreakPoints>
+    <Watches Count="1">
+      <Item1>
+        <Expression Value="Screen"/>
+      </Item1>
+    </Watches>
+  </Debugging>
   <EditorMacros Count="0"/>
 </CONFIG>

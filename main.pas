@@ -5,10 +5,13 @@ unit main;
 interface
 
 uses
-  LCLIntf, LCLType, LMessages, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ExtCtrls, TNCNX, StdCtrls, Buttons, ComCtrls, ImgList, VgaEmu;
+  LCLIntf, LCLType, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  ExtCtrls, MainSocket, StdCtrls, Buttons, VgaEmu;
 
 type
+
+  { TMF }
+
   TMF = class(TForm)
     Panel_SysBar: TPanel;
     Panel_StatusBar: TPanel;
@@ -21,8 +24,9 @@ type
     procedure FormKeyPress(Sender: TObject; var Key: Char);
     procedure FormKeyDown(Sender: TObject; var Key: Word;
       Shift: TShiftState);
-    procedure MainSocketDataAvailable(Sender: TTnCnx; Buffer: PChar;
-      Len: Integer);
+    procedure FormPaint(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure MainSocketDataAvailable(Buffer: PChar; Len: Integer);
     procedure MaxResWin;
     procedure ImgSysBarMouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Integer);
@@ -37,11 +41,12 @@ type
       Shift: TShiftState; X, Y: Integer);
     procedure ButtonImagesMouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
+    procedure Timer1Timer(Sender: TObject);
     procedure WMEraseBkgnd(var Message: TWMEraseBkgnd); message WM_ERASEBKGND;
     procedure ImgSizerMouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
     procedure FormDestroy(Sender: TObject);
-    procedure MainSocketSessionClosed(Sender: TTnCnx; Error: Word);
+    procedure MainSocketSessionClosed(Error: Integer);
 
     procedure UpdateScrollBar;
     procedure MainScrollBarScroll(Sender: TObject; ScrollCode: TScrollCode;
@@ -68,6 +73,8 @@ type
      procedure Resetwindowsize;
   public
 {    Parser : TIOBuf;}
+    VGAEmu1 : TVgaEmu;
+    MSocket : TMainSocket;
     procedure DataIn( strIn : PChar; Len : integer ); overload;
     procedure DataIn( strIn : String ); overload;
     procedure DataOut(chr: string);
@@ -91,6 +98,16 @@ implementation
 uses DialForm, IceAnsi, RipParse, MsgForm, Globals, Config, Help;
 {$R *.lfm}
 
+procedure HasData(p:pchar;l:word);
+begin
+  MF.MainSocketDataAvailable(p,l);
+end;
+
+procedure SessionClosed(e:integer);
+begin
+  MF.MainSocketSessionClosed(e);
+end;
+
 {###############################################################################
                           FORM SECTION
 ###############################################################################}
@@ -113,6 +130,26 @@ begin
   fullscreen := false;
 
   //init VgaEmu1
+  MSocket := TMainSocket.create;
+  MSocket.HasData:= Main.HasData;
+  MSocket.SessionClosed := SessionClosed;
+  VgaEmu1 := TVgaEmu.Create(Self);
+  with VgaEmu1 do
+  begin
+     Parent := MF;
+{     width := Image1.Width;
+     top := image1.Top;
+     left := image1.Left;
+     height := image1.Height;}
+     align := alClient;
+     AutoSize := true;
+  end;
+  VgaEmu1.OnKeyDown:=FormKeyDown;
+  VgaEmu1.OnKeyPress:=FormKeyPress;
+  VgaEmu1.OnMouseDown:=VgaEmu1MouseDown;
+  VgaEmu1.OnMouseMove:=VgaEmu1MouseMove;
+  VgaEmu1.OnMouseUp:=VgaEmu1MouseUp;
+
   VgaEmu1.Init;
   VgaEmu1.setResolution(640,400);
 
@@ -135,10 +172,8 @@ begin
 
   //initalize ansi
   InitAnsi;
-
 {  Parser := TIOBuf.Create(false);}
 end;
-
 {--------------------- ================ -------------------
                          Destroy Form
  --------------------- ================ -------------------}
@@ -148,9 +183,9 @@ begin
    DXDrawFinalize(Sender);
    {$ENDIF}
    VgaEmu1.Free;
-   if MainSocket.IsConnected then
-      MainSocket.Close;
-   MainSocket.Destroy;
+   if MSocket.IsConnected then
+      MSocket.Close;
+   MSocket.Destroy;
 end;
 
 {--------------------- ================ -------------------
@@ -206,6 +241,16 @@ begin //do hot keys
     123 : ToggleDataScope; //F12
   end;
   IF keyChr <> #0 then DataOut(keyChr);
+end;
+
+procedure TMF.FormPaint(Sender: TObject);
+begin
+  VgaEmu1.Repaint;
+end;
+
+procedure TMF.FormShow(Sender: TObject);
+begin
+   Resetwindowsize;
 end;
 
 {--------------------- ================ -------------------
@@ -430,6 +475,10 @@ begin
    end;
 end;
 
+procedure TMF.Timer1Timer(Sender: TObject);
+begin
+end;
+
 {--------------------- ================ -------------------
                      Form Resize capture
  --------------------- ================ -------------------}
@@ -448,9 +497,9 @@ end;
  --------------------- ================ -------------------}
 procedure TMF.Connect;
 begin
-  MainSocket.Host := frmDial.HostEdit.Text;
-  MainSocket.Port :=  frmDial.PortEdit.Text;
-  MainSocket.Connect;
+  MSocket.Host := frmDial.HostEdit.Text;
+  MSocket.Port :=  frmDial.PortEdit.Text;
+  MSocket.Connect;
 end;
 
 {--------------------- ================ -------------------
@@ -458,7 +507,7 @@ end;
  --------------------- ================ -------------------}
 procedure TMF.Disconnect;
 begin
-  MainSocket.Close;
+  MSocket.Close;
 end;
 
 {--------------------- ================ -------------------
@@ -466,8 +515,8 @@ end;
  --------------------- ================ -------------------}
 procedure TMF.DataOut(chr : string);
 begin
-  IF MainSocket.IsConnected THEN
-    MainSocket.SendStr(chr)
+  IF MSocket.IsConnected THEN
+    MSocket.SendStr(chr)
   ELSE begin
     VgaEmu1.write(chr);
   end;
@@ -476,8 +525,7 @@ end;
 {--------------------- ================ -------------------
                       Telnet Data Avalible
  --------------------- ================ -------------------}
-procedure TMF.MainSocketDataAvailable(Sender: TTnCnx; Buffer: PChar;
-  Len: Integer);
+procedure TMF.MainSocketDataAvailable(Buffer: PChar; Len: Integer);
 begin
   DataIn(Buffer, Len);
 end;
@@ -485,9 +533,9 @@ end;
 {--------------------- ================ -------------------
                          Close Telnet
  --------------------- ================ -------------------}
-procedure TMF.MainSocketSessionClosed(Sender: TTnCnx; Error: Word);
+procedure TMF.MainSocketSessionClosed(Error: Integer);
 begin
-  SendMsg('Disconnected from host.');
+  SendMsg('Disconnected from host.' + inttostr(error));
 end;
 
 
